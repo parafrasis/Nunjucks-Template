@@ -1,0 +1,10 @@
+npm init --yes
+# Después hay que cambiarle el nombre al proyecto
+# en package.json
+
+npm install gulp@4 --save-dev
+
+npm install gulp-sass --save-dev
+
+npm install gulp-nunjucks --save-dev
+
