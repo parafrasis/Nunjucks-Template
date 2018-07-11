@@ -1,7 +1,7 @@
 {
   "name": "Gulp-4_Nunjucks_and_friends",
   "version": "1.0.0",
-  "description": "A simple template for Gulp 4",
+  "description": "A simple template for Gulp 4 and other tools",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
