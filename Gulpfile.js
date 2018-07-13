@@ -55,6 +55,7 @@ const reload = (done) => {
 	sync.reload();
 	done();
 }
+
 const serve = (done) => {
 	sync.init({
 		server: {
