@@ -1,9 +1,7 @@
 # Carpeta con el resultado y con recursos
 dist/
-*
 
-recursos/ 
-*
+recursos/
 
 # Logs
 logs
