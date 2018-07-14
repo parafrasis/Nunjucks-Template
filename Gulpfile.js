@@ -23,7 +23,7 @@ const sync = require('browser-sync').create();
 gulp.task('markdown', () =>
     gulp.src('src/md/*.md')
         .pipe(markdown())
-        .pipe(gulp.dest('src/nunjucks/templates/md2html'))
+        .pipe(gulp.dest('src/nunjucks/templates/partials/md2html'))
 );
 
 // // -----------------------------------------------------------------------------
