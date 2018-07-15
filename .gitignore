@@ -1,9 +1,8 @@
-# Carpeta con el resultado y con recursos
+# Carpeta con el resultado
 dist
-*.html
 
-recursos/
-*
+# Carpeta con recursos
+recursos
 
 # Logs
 logs
