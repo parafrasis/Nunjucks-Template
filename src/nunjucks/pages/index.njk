@@ -1,9 +1,6 @@
-<!--
-Carga este archivo desde templates/
-Atención, que los nombres de los bloques
-no pueden llevar signo-menos entremedio
--->
 {% extends "layout.njk" %}
-{% block testGulpNunjucks %}
-	{% include "partials/main.njk" %}
-{% endblock %}
+{% block header %}  {% include "partials/header.njk" %}  {% endblock %}
+{% block nav %}     {% include "partials/nav.njk"    %}  {% endblock %}
+{% block aside %}    {% include "partials/aside.njk"   %}  {% endblock %}
+{% block main %}    {% include "partials/main.njk"   %}  {% endblock %}
+{% block footer %}  {% include "partials/footer.njk" %}  {% endblock %}

@@ -1,0 +1,11 @@
+header {
+	grid-area: header;
+	display: flex;
+	align-items: center;
+	justify-content:flex-start;
+	background: grey;
+	color:darkgreen;
+	> h1 {
+		font-family: Ubuntu;
+		font-size: 64px;}
+}

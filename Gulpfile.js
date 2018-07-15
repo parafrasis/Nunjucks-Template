@@ -11,19 +11,35 @@
 // -----------------------------------------------------------------------------
 const gulp = require('gulp');
 // var data = require('gulp-data');
-var markdown = require('gulp-markdown');
+// const run = require('gulp-run-command');
+const spawn = require("gulp-spawn");
+const markdown = require('gulp-markdown');
 const render = require('gulp-nunjucks-render');
 const sass = require('gulp-sass');
 const sync = require('browser-sync').create();
 
+// -----------------------------------------------------------------------------
+// Graphviz w/ Spawn
+// -----------------------------------------------------------------------------
+gulp.task('gv', () =>
+    gulp.src('src/dot/*.gv')
+    .pipe(spawn({
+        cmd: 'dot',
+        args: ['-Tsvg'],
+        filename: (base, ext) => {
+            return base + '.gv.svg';
+        }
+    }))
+    .pipe(gulp.dest('dist/img/'))
+);
 
 // // -----------------------------------------------------------------------------
 // // Markdown
 // // -----------------------------------------------------------------------------
 gulp.task('markdown', () =>
     gulp.src('src/md/*.md')
-        .pipe(markdown())
-        .pipe(gulp.dest('src/nunjucks/templates/partials/md2html'))
+    .pipe(markdown())
+    .pipe(gulp.dest('src/nunjucks/templates/partials/md2html'))
 );
 
 // // -----------------------------------------------------------------------------
@@ -34,16 +50,16 @@ gulp.task('nunjucks', () => {
         .pipe(render({
             path: ['src/nunjucks/pages/', 'src/nunjucks/templates/', 'src/nunjucks/templates/partials/', 'src/nunjucks/macros/']
         }))
-			.pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('dist/'));
 });
 
 // // -----------------------------------------------------------------------------
 // // Sass
 // // -----------------------------------------------------------------------------
 gulp.task('sass', () => {
-	return gulp.src('src/sass/**/*.scss')
-		.pipe(sass().on('error', sass.logError))
-			.pipe(gulp.dest('dist/css'));
+    return gulp.src('src/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('dist/css'));
 });
 
 
@@ -52,17 +68,17 @@ gulp.task('sass', () => {
 // // https://github.com/gulpjs/gulp/blob/master/docs/recipes/minimal-browsersync-setup-with-gulp4.md
 // // -----------------------------------------------------------------------------
 const reload = (done) => {
-	sync.reload();
-	done();
+    sync.reload();
+    done();
 }
 
 const serve = (done) => {
-	sync.init({
-		server: {
-			baseDir: 'dist'
-		}
-	});
-	done();
+    sync.init({
+        server: {
+            baseDir: 'dist'
+        }
+    });
+    done();
 }
 
 // // // -----------------------------------------------------------------------------
@@ -72,7 +88,7 @@ const serve = (done) => {
 // // // -----------------------------------------------------------------------------
 gulp.task('watch', () => {
     gulp.watch(['src/md/**/*.md', 'src/sass/**/*.scss', 'src/nunjucks/**/*.njk'],
-    gulp.series('markdown', 'sass', 'nunjucks', reload));
+        gulp.series('markdown', 'sass', 'nunjucks', reload));
 });
 
 // -----------------------------------------------------------------------------

@@ -1,6 +1,17 @@
-body {
-	margin: 50px 75px;
-	background: darkslateblue;
-	color: beige;
-	font-family: sans-serif;
-}
+// nestedFilenamePattern: '/home/christian/public_html/web/parafrasis/css/$1.nested.css', compressedFilenamePattern: '/home/christian/public_html/web/parafrasis/css/$1.min.css';
+@import 'includes/fonts';
+@import 'includes/colores';
+
+@import 'includes/normalize';
+@import 'includes/html5bp';
+
+@import 'includes/page';
+@import 'includes/header';
+@import 'includes/nav';
+@import 'includes/main';
+@import 'includes/aside';
+@import 'includes/footer';
+
+@import 'includes/celulares';
+
+@import 'includes/helpers';

@@ -1,0 +1,10 @@
+digraph X {
+	"index.html" -> "index.njk";
+	"index.njk" -> {"layout.njk", "main.njk"};
+	"main.njk" -> "inhalt.html";
+	"inhalt.html" -> "inhalt.md"
+	"dist/" -> "index.html"
+	"src/nunjucks/pages/" -> "index.njk"
+	"src/nunjucks/templates/" -> "layout.njk"
+	"src/nunjucks/templates/partials/" -> "main.njk"
+}
