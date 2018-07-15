@@ -1,3 +1,9 @@
+# Tuve un problema con este archivo, no me reconocía un par
+# de archivos que había descartado de git. La solución en:
+#
+# https://stackoverflow.com/questions/11451535/gitignore-is-not-working
+#
+
 # Carpeta con el resultado
 dist
 
