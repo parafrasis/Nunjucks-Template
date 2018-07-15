@@ -24,12 +24,12 @@ html {
   background: black; }
 
 body {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0;
   display: grid;
   grid-template-rows: 1fr auto 5fr 1fr;
-  grid-template-columns: 7fr 1fr;
+  grid-template-columns: 800px 1fr;
   grid-template-areas: "header header" "nav nav" "main aside" "footer footer";
   grid-gap: 5px;
   height: 100vh;
@@ -44,7 +44,8 @@ header {
   color: darkgreen; }
   header > h1 {
     font-family: Ubuntu;
-    font-size: 64px; }
+    font-size: 64px;
+    margin: 20px; }
 
 nav {
   grid-area: nav;
@@ -52,9 +53,8 @@ nav {
   align-items: center;
   justify-content: center;
   background: grey; }
-  nav > h1 {
-    font-family: Ubuntu;
-    font-size: 16px; }
+  nav > ul {
+    display: inline-flex; }
 
 main {
   grid-area: main;
@@ -62,6 +62,11 @@ main {
   align-items: center;
   justify-content: center;
   background: grey; }
+  main > h1 {
+    padding: 0 50px; }
+  main > p {
+    padding: 25px 50px;
+    font-size: 21px; }
 
 aside {
   grid-area: aside;
