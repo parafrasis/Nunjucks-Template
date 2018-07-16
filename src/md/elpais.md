@@ -25,7 +25,7 @@ body {
                      	 "nav nav"
 					 	 "main aside"
 					 	 "footer footer";
-	height: 100vw; (!)
+	height: 100vh; (!)
 }
 ```
 El problema se presentó cuando definí el Nav como elemento Sticky con "top: 0". Este Nav se mantenía adherido a la posición nombrada pero en un momento "se lo llevaba" la página en la medida que avanzaba verticalmente.  
