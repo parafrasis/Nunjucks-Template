@@ -1,16 +1,36 @@
 main {
 	grid-area: main;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: grey;
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	background: $blanco-leche;
+	color: $negro-tinta;
 
-	> h1 {
-		padding: 0 50px;
-	}
+	article {
+		margin-top: 45px;
+		margin-left:80px;
+		margin-right: 42px;
+		margin-bottom: 45px;
+		> h1 {
+			padding: 45px 0px 0;
+			margin-bottom: 0;
+			font-family: 'IBM Plex Sans';
+			font-size: 40px;
+		}
 
-	> p {
-		padding: 25px 50px;
-		font-size: 21px;
+		> p {
+			font-family: 'IBM Plex Serif';
+			font-weight: 400;
+			padding: 25px 7px;
+			margin: 0;
+			margin-left: 42px;
+			font-size: 21px;
+			line-height: 160%;
+			hyphens: auto;
+		}
+
+		> p+p {
+			padding-top: 0;
+		}
 	}
 }
