@@ -6,9 +6,9 @@ header {
 	justify-content: space-around;
 	background: $negro-tinta;
 	// background: linear-gradient(rgba(hsl($negro-tinta))), url("../img/header.jpg");
-	background: linear-gradient(to right, $negro-tinta, $negro-tinta, $blanco-leche, transparent), url("../img/header.jpg") no-repeat;
-	background: linear-gradient(to right, $negro-tinta 15%, $negro-tinta 30%, transparent 100%), url("../img/header.jpg") no-repeat;
-	background: linear-gradient(269deg, rgba(255,0,0,0.1) 0%, $negro-tinta 67%, $negro-tinta 97%), url("../img/header.jpg") no-repeat;
+	// background: linear-gradient(to right, $negro-tinta, $negro-tinta, $blanco-leche, transparent), url("../img/header.jpg") no-repeat;
+	// background: linear-gradient(to right, $negro-tinta 15%, $negro-tinta 30%, transparent 100%), url("../img/header.jpg") no-repeat;
+	background: linear-gradient(340deg, hsla(358, 60%, 46%, 0.65) 0%, $negro-tinta 55%, $negro-tinta 100%), url("../img/header2.jpg") no-repeat;
 
 	> h1 {
 		font-family: Ubuntu;
