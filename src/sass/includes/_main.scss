@@ -16,6 +16,7 @@ main {
 			margin-bottom: 0;
 			font-family: 'IBM Plex Sans';
 			font-size: 40px;
+			color: $gris-negro;
 		}
 
 		> p {
@@ -27,6 +28,12 @@ main {
 			font-size: 21px;
 			line-height: 160%;
 			hyphens: auto;
+		}
+
+		> pre {
+			font-size: 16px;
+			margin-left: 49px;
+			color: $rojo-sangre;
 		}
 
 		> p+p {
