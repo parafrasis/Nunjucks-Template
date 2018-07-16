@@ -1,4 +1,6 @@
 nav {
+	position: sticky;
+	top: 0;
 	grid-area: nav;
 	margin: 0;
 	background: $verde-pato;
@@ -17,15 +19,16 @@ nav {
 		font-weight: 400;
 		letter-spacing: 1px;
 
-		// > li:nth-child(1) {
-		// 	margin-right: auto;
-		// 	margin-left: 35px;
-		// }
+		> li:nth-child(4) {
+			margin-right: 50px;
+		}
 
 		> li {
 			list-style: none;
 			padding: 15px 25px;
 		}
+		> li+li {
+		padding: 15px 40px;}
 		> li.active {
 			background: $rojo-sangre;}
 	}
