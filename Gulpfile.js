@@ -10,13 +10,33 @@
 // Dependencias para el desarrollo (npm install xxx@yyy --dev)
 // -----------------------------------------------------------------------------
 const gulp = require('gulp');
-// var data = require('gulp-data');
-// const run = require('gulp-run-command');
+const data = require('gulp-data');
+const exec = require('gulp-exec');
 const spawn = require("gulp-spawn");
 const markdown = require('gulp-markdown');
 const render = require('gulp-nunjucks-render');
 const sass = require('gulp-sass');
 const sync = require('browser-sync').create();
+
+//
+// Hay que crear antes un fichero para el src (somefile.txt).
+//
+gulp.task('test', function(){
+    var options = {
+        continueOnError: false, // default = false, true means don't emit error event
+        pipeStdout: true, // default = false, true means stdout is written to file.contents
+        customTemplatingThing: 'test' // content passed to gutil.template()
+    };
+    var reportOptions = {
+        err: false, // default = true, false means don't write err
+        stderr: true, // default = true, false means don't write stderr
+        stdout: false // default = true, false means don't write stdout
+    };
+    return gulp.src('somefile.txt')
+        .pipe(exec('ls -alR src/* | grep njk', options))
+        .pipe(exec.reporter(reportOptions))
+        .pipe(gulp.dest('build/'));
+});
 
 // -----------------------------------------------------------------------------
 // Graphviz w/ Spawn
